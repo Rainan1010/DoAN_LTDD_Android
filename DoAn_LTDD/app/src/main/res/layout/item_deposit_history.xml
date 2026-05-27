@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="14dp">
+
+        <FrameLayout
+            android:id="@+id/iconContainer"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_circle_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_sync"
+                app:tint="#0277BD"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvHistoryGoalName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mua xe Vision"
+            android:textSize="16sp"
+            android:textColor="#263238"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintStart_toEndOf="@id/iconContainer"
+            app:layout_constraintTop_toTopOf="@id/iconContainer"
+            app:layout_constraintEnd_toStartOf="@id/tvHistoryAmount"/>
+
+        <TextView
+            android:id="@+id/tvHistoryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13/11/2021"
+            android:textSize="13sp"
+            android:textColor="#90A4AE"
+            app:layout_constraintStart_toStartOf="@id/tvHistoryGoalName"
+            app:layout_constraintTop_toBottomOf="@id/tvHistoryGoalName" />
+
+        <TextView
+            android:id="@+id/tvHistoryAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+100.000đ"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#43A047"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
